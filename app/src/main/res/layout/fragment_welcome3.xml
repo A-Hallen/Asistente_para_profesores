@@ -78,13 +78,13 @@
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_margin="10dp"
-            android:background="@drawable/welcome_progress"
-            android:backgroundTint="@color/primero" />
+            android:background="@drawable/welcome_progress"/>
 
         <ImageView
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_margin="10dp"
+            android:backgroundTint="@color/primero"
             android:background="@drawable/welcome_progress" />
 
         <ImageView
