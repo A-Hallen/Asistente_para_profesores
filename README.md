@@ -1,11 +1,13 @@
 # Asistente para profesores
 Herramientas para profesores universitarios
 <p align="center" style="margin-bottom: 20px;">
-<img src="https://user-images.githubusercontent.com/87169063/235421392-7a22b52c-42dd-42e8-9121-ad1753b22c96.png" width="622" height="496">
+<img src="https://user-images.githubusercontent.com/87169063/235461040-f6d71768-0a36-4abb-ae70-1d07bd7ead13.png">
 </p>
+
 Asistente para profesores es una aplicación móvil para Android que tiene como objetivo facilitar el día a día de los profesores universitarios proporcionándoles herramientas útiles que les permitan gestionar su tiempo y tareas de manera más eficiente.
 
 ## Funcionalidades
+
 
 - Gestión de horarios: el usuario puede crear y editar su horario semanal, con la posibilidad de agregar clases de distintas asignaturas.
 - Recordatorios: el usuario puede establecer recordatorios para eventos importantes, como entregas de trabajos, exámenes, entre otros.
