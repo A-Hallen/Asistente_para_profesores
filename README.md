@@ -1,7 +1,7 @@
 # Asistente para profesores
 Herramientas para profesores universitarios
 ![welcome](https://user-images.githubusercontent.com/87169063/235421392-7a22b52c-42dd-42e8-9121-ad1753b22c96.png)
-
+<img src="https://user-images.githubusercontent.com/87169063/235421392-7a22b52c-42dd-42e8-9121-ad1753b22c96.png" width="1244" height="992">
 Asistente para profesores es una aplicación móvil para Android que tiene como objetivo facilitar el día a día de los profesores universitarios proporcionándoles herramientas útiles que les permitan gestionar su tiempo y tareas de manera más eficiente.
 
 ## Funcionalidades
