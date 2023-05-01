@@ -25,6 +25,10 @@ Asistente para profesores es una aplicación móvil para Android que tiene como 
 2. En tu dispositivo Android, habilita la opción de "fuentes desconocidas" en los ajustes de seguridad.
 3. Abre el archivo APK descargado y sigue las instrucciones de instalación.
 
+## Ayuda y soporte
+
+Si necesitas ayuda para comprender el funcionamiento de la aplicación, puedes revisar el manual de usuario. Si aún tienes preguntas o problemas, por favor envíame un correo electrónico a: hallen412120@gmail.com estaré encantado de ayudarte.
+
 ## Contribuciones
 
 Este proyecto es de código abierto y cualquier contribución es bienvenida. Si deseas contribuir al desarrollo de la aplicación, por favor crea un pull request en el repositorio de GitHub.
