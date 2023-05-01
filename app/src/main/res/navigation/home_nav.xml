@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/homeViewPagerFragment">
+
+    <fragment
+        android:id="@+id/openAiFragment"
+        android:name="com.hallen.asistentedeprofesores.ui.view.fragments.FragmentOpenAi"
+        android:label="@string/asistente"
+        tools:layout="@layout/fragment_open_ai"/>
+    <fragment
+        android:id="@+id/homeViewPagerFragment"
+        android:name="com.hallen.asistentedeprofesores.ui.view.fragments.HomeViewPagerFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home_view_pager" >
+        <action
+            android:id="@+id/action_homeViewPagerFragment_to_fragmentCreateGroup"
+            app:destination="@id/fragmentCreateGroup"
+            app:popUpTo="@id/fragmentCreateGroup"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_homeViewPagerFragment_to_assistanceFragment"
+            app:destination="@id/groupFragment" />
+        <action
+            android:id="@+id/action_homeViewPagerFragment_to_openAiFragment"
+            app:destination="@id/openAiFragment" />
+        <action
+            android:id="@+id/action_homeViewPagerFragment_to_controlPc"
+            app:destination="@id/controlPc" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCreateGroup"
+        android:name="com.hallen.asistentedeprofesores.ui.view.fragments.FragmentCreateGroup"
+        android:label="@string/crear_grupo"
+        tools:layout="@layout/fragment_create_group" >
+        <argument
+            android:name="groupId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDays"
+        android:name="com.hallen.asistentedeprofesores.ui.view.fragments.FragmentDays"
+        android:label="Dias"
+        tools:layout="@layout/fragment_days" >
+        <argument
+            android:name="groupId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupFragment"
+        android:name="com.hallen.asistentedeprofesores.ui.view.fragments.FragmentGroup"
+        android:label="Grupo"
+        tools:layout="@layout/fragment_group" >
+        <action
+            android:id="@+id/action_groupFragment_to_fragmentDays"
+            app:destination="@id/fragmentDays" />
+        <argument
+            android:name="groupId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/controlPc"
+        android:name="com.hallen.asistentedeprofesores.ui.view.fragments.ControlPc"
+        android:label="Control Pc"
+        tools:layout="@layout/fragment_control_pc" />
+</navigation>
