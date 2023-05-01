@@ -21,9 +21,10 @@ Asistente para profesores es una aplicación móvil para Android que tiene como 
 
 ## Instalación
 
-1. Descarga el archivo APK desde el repositorio de GitHub.
-2. En tu dispositivo Android, habilita la opción de "fuentes desconocidas" en los ajustes de seguridad.
-3. Abre el archivo APK descargado y sigue las instrucciones de instalación.
+1. descarga la aplicación directamente desde la sección [Releases](https://github.com/A-Hallen/Asistente_para_profesores/releases) de nuestro repositorio.
+2. Busca la versión más reciente de la aplicación y haz clic en el enlace correspondiente para descargar el archivo APK.
+3. En tu dispositivo Android, habilita la opción de "fuentes desconocidas" en los ajustes de seguridad.
+4. Abre el archivo APK descargado y sigue las instrucciones de instalación.
 
 ## Ayuda y soporte
 
