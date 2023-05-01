@@ -1,6 +1,6 @@
 # Asistente para profesores
 Herramientas para profesores universitarios
-<p align="center" style="margin-bottom: 20px;">
+<p align="center" style="margin-bottom: 20px;" width="50%">
 <img src="https://user-images.githubusercontent.com/87169063/235461040-f6d71768-0a36-4abb-ae70-1d07bd7ead13.png">
 </p>
 
