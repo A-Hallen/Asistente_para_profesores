@@ -30,7 +30,7 @@ Asistente para profesores es una aplicación móvil para Android que tiene como 
 
 ## Ayuda y soporte
 
-Si necesitas ayuda para comprender el funcionamiento de la aplicación, puedes revisar el manual de usuario. Si aún tienes preguntas o problemas, por favor envíame un correo electrónico a: hallen412120@gmail.com estaré encantado de ayudarte.
+Si necesitas ayuda para comprender el funcionamiento de la aplicación, puedes revisar la [documentación](https://a-hallen.github.io/Asistente_para_profesores/), donde se resolverán la mayor parte de tus dudas. Si aún tienes preguntas o problemas, por favor envíame un correo electrónico a: hallen412120@gmail.com estaré encantado de ayudarte.
 
 ## Contribuciones
 
