@@ -35,7 +35,8 @@ class FragmentHorario : Fragment() {
     private val dias = listOf("lunes", "martes", "miercoles", "jueves", "viernes")
 
     // Definir un formato de hora reutilizable
-    private val formatter = SimpleDateFormat("hh:mm", Locale.getDefault())
+    private val formatter = SimpleDateFormat("hh:mm aa", Locale.getDefault())
+    private val formatter1 = SimpleDateFormat("hh:mm", Locale.getDefault())
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -81,6 +82,10 @@ class FragmentHorario : Fragment() {
             calendar.set(Calendar.MINUTE, minute)
             button.text = formatter.format(calendar.time)
         }
+        val date = try {
+            formatter.parse(button.text.toString())
+        } catch (e: Exception) {    formatter1.parse(button.text.toString())   }
+        calendar.time = date?: Date()
         val hour = calendar.get(Calendar.HOUR_OF_DAY)
         val minute = calendar.get(Calendar.MINUTE)
         val timePickerDialog =
@@ -170,8 +175,11 @@ class FragmentHorario : Fragment() {
             val startText = dialogBinding.horarioTimeStart.text.toString().trim()
             val endText = dialogBinding.horarioTimeEnd.text.toString().trim()
 
-            val timeInicio = formatter.parse(startText) ?: return@setOnClickListener
-            val timeEnd = formatter.parse(endText) ?: return@setOnClickListener
+            val timeInicio = try {  formatter.parse(startText)
+            } catch (e: Exception){ formatter1.parse(startText) } ?: return@setOnClickListener
+
+            val timeEnd = try { formatter.parse(endText) } catch (e: Exception) {
+                formatter1.parse(endText) } ?: return@setOnClickListener
 
             if (dialogBinding.grupo.text.isBlank()) {
                 Toast.makeText(requireContext(), "Falta el nombre del grupo", Toast.LENGTH_SHORT)
@@ -205,8 +213,12 @@ class FragmentHorario : Fragment() {
         tableLayout.removeAllViews()
 
         // Determine el rango de horas de las clases
-        //val horas = claseViewModel.clasesModel.value!!.map { it.horaInicio to it.horaFin }.sortedBy { it.first }
-        val horas = claseViewModel.clasesModel.value?.sortedBy { it.horaInicio } ?: return
+        val horas: List<Clase> = try {
+            claseViewModel.clasesModel.value?.sortedBy { formatter.parse(it.horaInicio)?.time }
+        } catch (e: Exception){
+            e.printStackTrace()
+            claseViewModel.clasesModel.value?.sortedBy { it.horaInicio }
+        } ?: return
 
         // Agrega la fila de encabezado con los días de la semana
         val encabezadoRow = TableRow(context)
@@ -243,7 +255,9 @@ class FragmentHorario : Fragment() {
             }
             row.addView(TextView(context)
                 .apply {
-                    text = getString(R.string.hora_template, hora.horaInicio, hora.horaFin)
+                    val horaInicio = if (hora.horaInicio.trim().length > 5) hora.horaInicio.dropLast(5) else hora.horaInicio
+                    val horaFin = if(hora.horaFin.trim().length > 5) hora.horaFin.dropLast(5) else hora.horaFin
+                    text = getString(R.string.hora_template, horaInicio.trim(), horaFin.trim())
                     setTextColor(Color.BLACK)
                     if (hora == horas.last()) {
                         background = ContextCompat.getDrawable(
